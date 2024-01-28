@@ -28,4 +28,8 @@ public class UserAccountRepository {
                 .filter(userAccount -> userAccount.getBalance() > balance)
                 .toList();
     }
+
+    public void clear() {
+        userAccountsList = new ArrayList<>();
+    }
 }
