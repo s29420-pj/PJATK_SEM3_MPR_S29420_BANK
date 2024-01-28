@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.example.s29420_bank.model.Currency.USD;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class UserAccountServiceTest {
+class UserAccountServiceUnitTest {
     private static UserAccountService userAccountService;
     private static UserAccountRepository userAccountRepository;
 

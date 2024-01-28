@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ValidationExceptionTest {
+class ValidationExceptionUnitTest {
     @Test
     void shouldThrowException() {
         ValidationException validationException = new ValidationException("Test Message");
