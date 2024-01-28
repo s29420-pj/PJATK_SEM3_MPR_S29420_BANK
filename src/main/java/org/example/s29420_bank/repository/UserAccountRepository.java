@@ -23,5 +23,9 @@ public class UserAccountRepository {
                 .findFirst();
     }
 
-
+    public List<UserAccount> findByBalanceGreaterThan(Double balance) {
+        return userAccountsList.stream()
+                .filter(userAccount -> userAccount.getBalance() > balance)
+                .toList();
+    }
 }
