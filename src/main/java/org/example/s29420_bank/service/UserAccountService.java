@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static org.example.s29420_bank.model.Currency.*;
+
 @Service
 @AllArgsConstructor
 public class UserAccountService {
@@ -27,7 +29,7 @@ public class UserAccountService {
         if (userAccount.getBalance() == null || userAccount.getBalance() < 0) {
             throw new ValidationException("User balance value cannot be negative");
         }
-        if (userAccount.getCurrency() == null) {
+        if (userAccount.getCurrency() == null || !(userAccount.getCurrency().equals(PLN) || userAccount.getCurrency().equals(USD) || userAccount.getCurrency().equals(EUR))) {
             throw new ValidationException("User currency cannot be null and must be PLN/USD/EUR");
         }
 
