@@ -41,6 +41,7 @@ public class UserAccountService {
 
     public List<UserAccount> findByBalanceGreaterThan(Double balance) {
         List<UserAccount> byBalanceGreaterThan = userAccountRepository.findByBalanceGreaterThan(balance);
+
         if (byBalanceGreaterThan.isEmpty()) {
             throw new ValidationException("Users with balance " + balance + " and greater not found");
         }
